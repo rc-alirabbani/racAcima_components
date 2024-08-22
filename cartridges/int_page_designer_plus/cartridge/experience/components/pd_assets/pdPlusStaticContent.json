@@ -1,0 +1,639 @@
+{
+    "name": "PD Plus Static Content",
+    "description": "Static Content Feature",
+    "group": "pd_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "customClassSetting",
+            "name": "Asset Custom Class",
+            "description": "Add Custom Class For Override Style",
+            "attribute_definitions": [
+                {
+                    "id": "customClass",
+                    "name": "Set Custom Class",
+                    "description": "Add Custom Class For Override Style",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "boxAlignment",
+            "name": "Asset Alignment",
+            "description": "Align Asset left, center or right horizontally",
+            "attribute_definitions": [
+                {
+                    "id": "horizontalAlignment",
+                    "name": "Asset Horizontal Alignment",
+                    "description":"Align Asset left, center or right horizontally",
+                    "type": "enum",
+                    "values": ["horizontal-left","horizontal-center", "horizontal-right"],
+                    "required": false
+                },
+                {
+                    "id": "verticalAlignment",
+                    "name": "Asset Vertical Alignment",
+                    "description":"Align Asset top, center or bottom vertically",
+                    "type": "enum",
+                    "values": ["vertical-top","vertical-center", "vertical-bottom"],
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "animationSetting",
+            "name": "Asset Animation Setting",
+            "description": "Set Animation Setting (type, speed, duration)",
+            "attribute_definitions": [
+                {
+                    "id": "AnimationLax",
+                    "name": "Select Class for animation on scroll",
+                    "description": "Please select a class for animation on scroll",
+                    "type": "enum",
+                    "values": [
+                        "Animate Image",
+                        "Column Animate Up",
+                        "Column Animate Down"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "animationType",
+                    "name": "Animation Type e.g (fade-in, fade-up, fade-down)",
+                    "description": "Please select type of animation",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "animationDuration",
+                    "name": "Animation Duration e.g (1000 is equal 1s)",
+                    "description": "Please select duration of animation",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "h1Configurations",
+            "name": "Asset Heading Configurations",
+            "attribute_definitions": [
+                {
+                    "id": "featureHeading",
+                    "name": "Heading Text",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id":"h1Font",
+                    "name":"Heading Font Family",
+                    "description":"Controls the font family for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"fontTextSize",
+                    "name":"Heading Font Size",
+                    "description":"Controls the font size for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"h1LetterSpacing",
+                    "name":"Heading Font letter Spacing",
+                    "description":"Controls the letter spacing for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"h1LineHeight",
+                    "name":"Heading Font Line-Height",
+                    "description":"Controls the font Line-Height for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"fontMargin",
+                    "name":"Set Heading Marging",
+                    "description":"Controls marging for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"fontPadding",
+                    "name":"Set Heading Padding",
+                    "description":"Controls Parging for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"h1FontColor",
+                    "name":"Heading Font Color",
+                    "description":"Controls the font color for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"h1FontShadow",
+                    "name":"Heading Font Shadow Color (2px 2px 2px #000)",
+                    "description":"Controls the font Shadow color for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"h1FontWeight",
+                    "name":"Heading Font Weight",
+                    "description":"Controls the font weight for heading",
+                    "type":"enum",
+                    "values":[
+                       "300",
+                       "400",
+                       "500",
+                       "600",
+                       "700"
+                    ],
+                    "required":false
+                }
+            ]
+        },
+        {
+            "id": "para1Configurations",
+            "name": "Asset Description Configurations",
+            "attribute_definitions": [
+                {
+                    "id": "featureDesc",
+                    "name": "Asset Description Text",
+                    "type": "markup",
+                    "required": false
+                },
+                {
+                    "id":"para1Font",
+                    "name":"Description Font Family",
+                    "description":"Controls the font family for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1TextSize",
+                    "name":"Description Font Size",
+                    "description":"Controls the font size for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1LetterSpacing",
+                    "name":"Heading Font letter Spacing",
+                    "description":"Controls the letter spacing for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1LineHeight",
+                    "name":"Heading Font Line-Height",
+                    "description":"Controls the font Line-Height for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1Margin",
+                    "name":"Set Description Marging",
+                    "description":"Controls marging for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1Padding",
+                    "name":"Set Description Padding",
+                    "description":"Controls Parging for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1Color",
+                    "name":"Description Font Color",
+                    "description":"Controls the font color for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1FontShadow",
+                    "name":"Description Font Shadow Color (2px 2px 2px #000)",
+                    "description":"Controls the font Shadow color for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"para1Weight",
+                    "name":"Description Font Weight",
+                    "description":"Controls the font weight for description",
+                    "type":"enum",
+                    "values":[
+                        "300",
+                        "400",
+                        "500",
+                        "600",
+                        "700"
+                    ],
+                    "required":false
+                }
+            ]
+        },
+        {
+            "id": "feature",
+            "name": "Asset Content",
+            "attribute_definitions": [
+                {
+                    "id": "featureIcon",
+                    "name": "Asset Icon (icon size 32px by 32px)",
+                    "type": "image",
+                    "description":"Asset Icon 32px by 32px",
+                    "required": false
+                },
+                {
+                    "id": "iconAlt",
+                    "name": "Asset Icon ALT",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "moduleLink",
+                    "name": "Link on module icon",
+                    "description": "Provide the Link URL of module icon",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "moduleNewtab",
+                    "name": "Link New Tab",
+                    "description": "Open Link in New Tab",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "featureImgWidth",
+                    "name": "Asset Image Width",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "featureImage",
+                    "name": "Asset Image",
+                    "type": "image",
+                    "description":"Asset Image",
+                    "required": false
+                },
+                {
+                    "id": "imgAlt",
+                    "name": "Asset Image ALT",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "featureImgDesc",
+                    "name": "Asset Image Description Text",
+                    "type": "markup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "assetCTAConfigurations",
+            "name": "CTA Configurations",
+            "description": "CTA configurations for this component.",
+            "attribute_definitions": [
+                {
+                    "id": "minWidth",
+                    "name": "Add min width Button",
+                    "description": "Please add minimum width link/CTA.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "assetCTALabel",
+                    "name": "Link Label",
+                    "description": "Label to display as the link/CTA.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "assetCTATitle",
+                    "name": "Link Title",
+                    "description": "Title attribute to attach to the asset's Link.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "assetCTAURL",
+                    "name": "Link",
+                    "description": "Link/CTA URL reference to add to the asset.",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "assetCTABgColor",
+                    "name": "Background color for CTA",
+                    "description": "Background color for CTA",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "assetCTATextColor",
+                    "name": "Text color for CTA",
+                    "description": "Text color for CTA",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "assetCTAHoverBgColor",
+                    "name": "Background hover color for CTA",
+                    "description": "Background hover color for CTA",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "assetCTAHoverTextColor",
+                    "name": "Text hover color for CTA",
+                    "description": "Text hover color for CTA",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "assetCTABorderRadius",
+                    "name": "Set border radius for CTA",
+                    "description": "Border radius for CTA",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "BannerImageCaption",
+            "name": "Asset Caption Feature",
+            "description": "Provide background image caption",
+            "attribute_definitions": [
+                {
+                    "id": "moduleBannerWidth",
+                    "name": "Banner Image Width",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "moduleBannerImage",
+                    "name": "Banner Image",
+                    "type": "image",
+                    "description":"Asset Image",
+                    "required": false
+                },
+                {
+                    "id": "moduleImgAlt",
+                    "name": "Banner Image ALT",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "captionXalignment",
+                    "name": "Caption Horizontal Alignment",
+                    "description":"Align Asset left, center or right horizontally",
+                    "type": "enum",
+                    "values": ["left","center", "right"],
+                    "required": false
+                },
+                {
+                    "id": "captionYalignment",
+                    "name": "Caption Vertical Alignment",
+                    "description":"Align Asset top, center or bottom vertically",
+                    "type": "enum",
+                    "values": ["top","center", "bottom"],
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "hConfigBanner",
+            "name": "Caption Heading Configurations",
+            "attribute_definitions": [
+                {
+                    "id": "moduleTitle",
+                    "name": "Banner Caption Heading Text",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id":"hFont1",
+                    "name":"Heading Font Family",
+                    "description":"Controls the font family for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"hfontTextSize",
+                    "name":"Heading Font Size",
+                    "description":"Controls the font size for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"hLetterSpacing",
+                    "name":"Heading Font letter Spacing",
+                    "description":"Controls the letter spacing for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"hLineHeight",
+                    "name":"Heading Font Line-Height",
+                    "description":"Controls the font Line-Height for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"hfontMargin",
+                    "name":"Set Heading Marging",
+                    "description":"Controls marging for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"hfontPadding",
+                    "name":"Set Heading Padding",
+                    "description":"Controls Parging for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"hFontColor1",
+                    "name":"Heading Font Color",
+                    "description":"Controls the font color for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"hFontShadow",
+                    "name":"Heading Font Shadow Color (2px 2px 2px #000)",
+                    "description":"Controls the font Shadow color for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"hFontWeight1",
+                    "name":"Heading Font Weight",
+                    "description":"Controls the font weight for heading",
+                    "type":"enum",
+                    "values":[
+                       "300",
+                       "400",
+                       "500",
+                       "600",
+                       "700"
+                    ],
+                    "required":false
+                }
+            ]
+        },
+        {
+            "id": "paraConfigBanner",
+            "name": "Caption Description Configurations",
+            "attribute_definitions": [
+                {
+                    "id": "moduleDesc",
+                    "name": "Banner Caption Description Text",
+                    "type": "markup",
+                    "required": false
+                },
+                {
+                    "id":"paraFont",
+                    "name":"Description Font Family",
+                    "description":"Controls the font family for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"paraTextSize",
+                    "name":"Description Font Size",
+                    "description":"Controls the font size for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"paraLetterSpacing",
+                    "name":"Heading Font letter Spacing",
+                    "description":"Controls the letter spacing for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"paraLineHeight",
+                    "name":"Heading Font Line-Height",
+                    "description":"Controls the font Line-Height for heading",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"paraMargin",
+                    "name":"Set Description Marging",
+                    "description":"Controls marging for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"paraPadding",
+                    "name":"Set Description Padding",
+                    "description":"Controls Parging for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"paraColor",
+                    "name":"Description Font Color",
+                    "description":"Controls the font color for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"paraFontShadow",
+                    "name":"Description Font Shadow Color (2px 2px 2px #000)",
+                    "description":"Controls the font Shadow color for description",
+                    "type":"string",
+                    "required":false
+                },
+                {
+                    "id":"paraWeight",
+                    "name":"Description Font Weight",
+                    "description":"Controls the font weight for description",
+                    "type":"enum",
+                    "values":[
+                        "300",
+                        "400",
+                        "500",
+                        "600",
+                        "700"
+                    ],
+                    "required":false
+                }
+            ]
+        },
+        {
+            "id": "layoutSettings",
+            "name": "UI Layout Settings",
+            "description": "The visual display of the component.",
+            "attribute_definitions": [
+                {
+                    "id": "setPaddingTop",
+                    "name": "Padding Top i.e. 20px / 1.25rem",
+                    "description": "Provide padding-top value applied outside the component",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingRight",
+                    "name": "Padding-Right i.e. 5px / .3125rem",
+                    "description": "Provide padding-right value applied outside the component",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingBottom",
+                    "name": "Padding-Bottom i.e. 15px / 0.9375rem",
+                    "description": "Provide padding-bottom value applied outside the component",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingLeft",
+                    "name": "Padding Left i.e. 10px / 0.625rem",
+                    "description": "Provide padding-left value applied outside the component",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginTop",
+                    "name": "Margin Top i.e. 20px / 1.25rem",
+                    "description": "Provide margin-top value applied outside the component",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginRight",
+                    "name": "Margin Right i.e. 15px / 0.9375rem",
+                    "description": "Provide margin-right value applied outside the component",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginBottom",
+                    "name": "Margin Bottom  i.e. 30px / 1.875rem",
+                    "description": "Provide margin-bottom value applied outside the component",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginLeft",
+                    "name": "Margin Left i.e. -15px / -0.9375rem",
+                    "description": "Provide margin-left value applied outside the component",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

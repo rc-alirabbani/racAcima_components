@@ -1,0 +1,330 @@
+{
+    "name": "PD Plus Flexible Row",
+    "description": "Flexible Row For PD Plus",
+    "group": "pd_layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "customClassSetting",
+            "name": "Row Custom Class",
+            "description": "Add Custom Class For Override Style",
+            "attribute_definitions": [
+                {
+                    "id": "customClass",
+                    "name": "Set Custom Class",
+                    "description": "Add Custom Class For Override Style",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "OrderSetting",
+            "name": "Asset columns Order Setting",
+            "description": "Set Animation Setting (type, speed, duration)",
+            "attribute_definitions": [
+                {
+                    "id": "orderColumns",
+                    "name": "Set the order of columns",
+                    "description": "Set order of columns left to right or right to left",
+                    "type": "enum",
+                    "values": [
+                        "order-left-to-right",
+                        "order-right-to-left"
+                    ],
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "boxAlignment",
+            "name": "Columns Alignment",
+            "description": "Align Columns left, center or right horizontally",
+            "attribute_definitions": [
+                {
+                    "id": "horizontalAlignment",
+                    "name": "Columns Horizontal Alignment",
+                    "description":"Align Columns left, center or right horizontally",
+                    "type": "enum",
+                    "values": ["horizontal-left","horizontal-center", "horizontal-right"],
+                    "required": false
+                },
+                {
+                    "id": "verticalAlignment",
+                    "name": "Columns Vertical Alignment",
+                    "description":"Align Columns top, center or bottom vertically",
+                    "type": "enum",
+                    "values": ["vertical-top","vertical-center", "vertical-bottom"],
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "componentSettings",
+            "name": "Component Settings",
+            "description": "The visual display of the container.",
+            "attribute_definitions": [
+                {
+                    "id": "isContainer",
+                    "name": "Layout Fluid",
+                    "description": "Set layout fluid or at center",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "removeGutter",
+                    "name": "Remove Gutter Space within Columns",
+                    "description": "Remove Gutter Space within Columns",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "sectionHeight",
+                    "name": "Section Height i.e. 20px / 1.25rem",
+                    "description": "Provide height value applied section Height",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "bgOverlay",
+                    "name": "Background Image Overlay Color in (RGBA)",
+                    "description": "Provide overlay color of background",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "bgGradiant",
+                    "name": "Background Gradiant Color",
+                    "description": "Provide gradiant color of background",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "backgroundColor",
+                    "name": "Specify Background Color",
+                    "description": "Set Background Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "backgroundImage",
+                    "name": "Specify Background Image",
+                    "description": "Set background Image",
+                    "type": "image",
+                    "required": false
+                },
+                {
+                    "id": "parallaxSection",
+                    "name": "Please select the background type ",
+                    "description": "Background type e.g (Parallax/Fixed)",
+                    "type": "enum",
+                    "values": [
+                        "Parallax",
+                        "Normal"
+                    ],
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "assetFlexibleBlockConfigurations",
+            "name": "Flexible Block Configurations",
+            "description": "Flexible Block configurations for this component.",
+            "attribute_definitions": [
+
+                {
+                    "id": "colDefault",
+                    "name": "Select Columns",
+                    "description": "Controls the columns of this block",
+                    "type": "enum",
+                    "values": [
+                        "col-1",
+                        "col-2",
+                        "col-3",
+                        "col-4",
+                        "col-5",
+                        "col-6",
+                        "col-7",
+                        "col-8",
+                        "col-9",
+                        "col-10",
+                        "col-11",
+                        "col-12"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "calForMobile",
+                    "name": "Columns for Mobile",
+                    "description": "Controls the columns for mobile of this block",
+                    "type": "enum",
+                    "values": [
+                        "col-sm-1",
+                        "col-sm-2",
+                        "col-sm-3",
+                        "col-sm-4",
+                        "col-sm-5",
+                        "col-sm-6",
+                        "col-sm-7",
+                        "col-sm-8",
+                        "col-sm-9",
+                        "col-sm-10",
+                        "col-sm-11",
+                        "col-sm-12"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "calForTablet",
+                    "name": "Columns for Tablet",
+                    "description": "Controls the columns for Tablet of this block",
+                    "type": "enum",
+                    "values": [
+                        "col-md-1",
+                        "col-md-2",
+                        "col-md-3",
+                        "col-md-4",
+                        "col-md-5",
+                        "col-md-6",
+                        "col-md-7",
+                        "col-md-8",
+                        "col-md-9",
+                        "col-md-10",
+                        "col-md-11",
+                        "col-md-12"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "colForDesktop",
+                    "name": "Columns for Desktop",
+                    "description": "Controls the columns for desktop of this block",
+                    "type": "enum",
+                    "values": [
+                        "col-lg-1",
+                        "col-lg-2",
+                        "col-lg-3",
+                        "col-lg-4",
+                        "col-lg-5",
+                        "col-lg-6",
+                        "col-lg-7",
+                        "col-lg-8",
+                        "col-lg-9",
+                        "col-lg-10",
+                        "col-lg-11",
+                        "col-lg-12"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "colForXLDesktop",
+                    "name": "Columns for XL Desktop",
+                    "description": "Controls the columns for XL desktop of this block",
+                    "type": "enum",
+                    "values": [
+                        "col-xl-1",
+                        "col-xl-2",
+                        "col-xl-3",
+                        "col-xl-4",
+                        "col-xl-5",
+                        "col-xl-6",
+                        "col-xl-7",
+                        "col-xl-8",
+                        "col-xl-9",
+                        "col-xl-10",
+                        "col-xl-11",
+                        "col-xl-12"
+                    ],
+                    "required": false
+                }
+                
+            ]
+        },
+        {
+            "id": "layoutSettings",
+            "name": "UI Layout Settings",
+            "description": "The visual display of the container.",
+            "attribute_definitions": [
+                {
+                    "id": "setPaddingTop",
+                    "name": "Padding Top i.e. 20px / 1.25rem",
+                    "description": "Provide padding-top value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingRight",
+                    "name": "Padding-Right i.e. 5px / .3125rem",
+                    "description": "Provide padding-right value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingBottom",
+                    "name": "Padding-Bottom i.e. 15px / 0.9375rem",
+                    "description": "Provide padding-bottom value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingLeft",
+                    "name": "Padding Left i.e. 10px / 0.625rem",
+                    "description": "Provide padding-left value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginTop",
+                    "name": "Margin Top i.e. 20px / 1.25rem",
+                    "description": "Provide margin-top value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginRight",
+                    "name": "Margin Right i.e. 15px / 0.9375rem",
+                    "description": "Provide margin-right value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginBottom",
+                    "name": "Margin Bottom  i.e. 30px / 1.875rem",
+                    "description": "Provide margin-bottom value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginLeft",
+                    "name": "Margin Left i.e. -15px / -0.9375rem",
+                    "description": "Provide margin-left value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setBorderTop",
+                    "name": "Border Top (1px solid #000)",
+                    "description": "Provide border-top value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setBorderBottom",
+                    "name": "Border Bottom (1px solid #000)",
+                    "description": "Provide border-bottom value applied outside the container",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+            "id":"columns",
+            "name":"Columns",
+            "component_type_exclusions": []
+        }
+    ]
+}

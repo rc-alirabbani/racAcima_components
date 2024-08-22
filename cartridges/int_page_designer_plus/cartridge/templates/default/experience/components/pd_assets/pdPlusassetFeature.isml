@@ -1,0 +1,45 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/pd_assets/pdPlusassetFeature.css');
+</isscript>
+
+<div class="module-feature module-feature__${pdict.customClass}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+    <div class="module-wrapper animation-css ${pdict.horizontalAlignment} ${pdict.verticalAlignment}" data-aos="${pdict.animationType}" data-aos-duration="${pdict.animationDuration}">
+        <isif condition="${pdict.featureIcon}">
+            <div class="module-icon">
+                <img src="${pdict.featureIcon}" alt="${pdict.iconAlt}" />
+            </div>
+        </isif>
+        <div class="module-content">
+            <isif condition="${pdict.featureHeading}">
+                <h3 class="module-title" style="font-size:${pdict.h1Configurations.fontSize}; margin:${pdict.h1Configurations.marginHeading}; padding:${pdict.h1Configurations.paddingHeading}; font-family: ${pdict.h1Configurations.font}; color:${pdict.h1Configurations.fontColor}; font-weight:${pdict.h1Configurations.fontWeight}; text-shadow: ${pdict.h1Configurations.fontShadow};">
+                    <isprint value="${pdict.featureHeading}" encoding="off" />
+                </h3>
+            </isif>
+            <isif condition="${pdict.featureDesc}">
+                <div class="module-description" style="font-size:${pdict.para1Configurations.fontSize}; margin:${pdict.para1Configurations.marginHeading}; padding:${pdict.para1Configurations.paddingHeading}; font-family: ${pdict.para1Configurations.font}; color:${pdict.para1Configurations.fontColor}; font-weight:${pdict.para1Configurations.fontWeight}; text-shadow: ${pdict.para1Configurations.para1Shadow};">
+                    <isprint value="${pdict.featureDesc}" encoding="off" />
+                </div>
+            </isif>
+        </div>
+        <isif condition="${pdict.featureImage}">
+            <div class="module-tile ${pdict.AnimationLax}">
+                <img style="max-width:${pdict.featureImgWidth}" src="${pdict.featureImage}" alt="${pdict.imgAlt}" />
+            </div>
+        </isif>
+        <isif condition="${pdict.featureImgDesc}">
+            <div class="module-bottom-description">
+                <isprint value="${pdict.featureImgDesc}" encoding="off" />
+            </div>
+        </isif>
+
+        <isif condition="${pdict.assetCTALabel !== null}">
+            <div class="assetBtn-block">
+                <a href="${pdict.assetCTAURL}" title="${pdict.assetCTATitle}" class="assetBtn">
+                    <span class="btn-off-hover" style="border-radius: ${pdict.assetCTABorderRadius}; background-color: ${pdict.assetCTABgColor}; color: ${pdict.assetCTATextColor};">${pdict.assetCTALabel}</span>
+                    <span class="btn-on-hover" style="border-radius: ${pdict.assetCTABorderRadius}; background-color: ${pdict.assetCTAHoverBgColor}; color: ${pdict.assetCTAHoverTextColor};">${pdict.assetCTALabel}</span>
+                </a>
+            </div>
+        </isif>
+    </div>
+</div>

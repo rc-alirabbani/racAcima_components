@@ -1,0 +1,25 @@
+
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceLayouts/layout.css');
+    assets.addCss('/css/experience/components/pd_layouts/pdPlusGrid.css');
+    assets.addCss('/css/experience/components/pd_layouts/pdPlusFlexibleRow.css');
+</isscript>
+
+<isset name="orderColumns" value="${pdict.containerConfigurations.orderColumns ? pdict.containerConfigurations.orderColumns : 'flex-row'}" scope="page" />
+<isset name="colDefault" value="${pdict.containerConfigurations.colDefault ? pdict.containerConfigurations.colDefault : 'col-12'}" scope="page" />
+<isset name="colForTablet" value="${pdict.containerConfigurations.calForTablet ? pdict.containerConfigurations.calForTablet : 'col-md-12'}" scope="page" />
+<isset name="calForMobile" value="${pdict.containerConfigurations.calForMobile ? pdict.containerConfigurations.calForMobile : 'col-sm-12'}" scope="page" />
+<isset name="colForDesktop" value="${pdict.containerConfigurations.colForDesktop ? pdict.containerConfigurations.colForDesktop : 'col-lg-12'}" scope="page" />
+<isset name="colForXLDesktop" value="${pdict.containerConfigurations.colForXLDesktop ? pdict.containerConfigurations.colForXLDesktop : 'col-xl-12'}" scope="page" />
+
+<div class="flexiable-row flexiable-row__${pdict.customClass} ${(!empty(pdict.parallaxSection) ? 'section-background' : 'section-parallax')}" <isif condition="${pdict.BGImageProperties}"><isprint value="${pdict.BGImageProperties}" encoding="off" /></isif>>
+    <div class="bgcolor-overlay" style= "background-color:${pdict.bgOverlay}"></div>
+    <div class="flexiable-row__wrapper ${pdict.orderColumns} ${pdict.horizontalAlignment} ${pdict.verticalAlignment}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+        <div class="${pdict.isContainer}">
+            <isset name="rowClasses" value="${'module-grid row'}" scope="page" />
+            <isset name="colClassNames" value="${'module-grid__item' +' '+ colDefault +' '+ calForMobile +' '+ colForTablet +' '+ colForDesktop +' '+ colForXLDesktop +' '+ (pdict.containerConfigurations.removeGutter ? 'px-0' : '') }" scope="page" />
+            <isprint value="${pdict.regions.columns.setClassName(rowClasses).setComponentClassName(colClassNames).render()}" encoding="off"/> 
+        </div>
+    </div>
+</div>

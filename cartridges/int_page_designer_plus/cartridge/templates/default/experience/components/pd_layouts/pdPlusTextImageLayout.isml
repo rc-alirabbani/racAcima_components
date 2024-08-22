@@ -1,0 +1,15 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/pd_layouts/pdPlusTextImageLayout.css');
+</isscript>
+
+<div class="pdplus-component imageTextSection ${pdict.bgImageParallax} ${pdict.customCss}" <isif condition="${pdict.BGImageProperties}"><isprint value="${pdict.BGImageProperties}" encoding="off" /></isif>>
+    <div class="bgcolor-overlay" style= "background-color:${pdict.bgOverlay}"></div>
+    <div class="textWithImageWrapper" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+        <iscomment> If checkbox is clicked className Container will be added here else container-fluid className will be added </iscomment>
+        <div class="${pdict.isContainer} ${pdict.customizeSpaces}">
+            <iscomment> Region Created for media and content </iscomment>
+            <isprint value="${pdict.regions.pdPlusTextWithImage.setClassName('content-holder').render()}" encoding="off" />
+        </div>
+    </div>
+</div>

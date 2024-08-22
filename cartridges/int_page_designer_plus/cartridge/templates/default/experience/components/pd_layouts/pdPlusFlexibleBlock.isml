@@ -1,0 +1,20 @@
+
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceLayouts/layout.css');
+    assets.addCss('/css/experience/components/pd_layouts/pdPlusGrid.css');
+    assets.addCss('/css/experience/components/pd_layouts/pdPlusFlexibleBlock.css');
+</isscript>
+
+<div class="pdplus-component flexiable-block flexiable-block__${pdict.customClass}  ${(!empty(pdict.parallaxSection) ? 'section-background' : 'section-parallax')}" <isif condition="${pdict.BGImageProperties}"><isprint value="${pdict.BGImageProperties}" encoding="off" /></isif> >
+    <div class="bgcolor-overlay" style= "background-color:${pdict.bgOverlay}"></div>
+    <div class="flexiable-block__wrapper" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+        <div class="${pdict.isContainer}">
+            <div class="module-grid row">
+                <isprint value="${pdict.regions.column1.setClassName("module-grid__item col-12 col-md-4").render()}" encoding="off" />
+                <isprint value="${pdict.regions.column2.setClassName("module-grid__item col-12 col-md-4").render()}" encoding="off" />
+                <isprint value="${pdict.regions.column3.setClassName("module-grid__item col-12 col-md-4").render()}" encoding="off" />
+            </div>
+        </div>
+    </div>
+</div>
