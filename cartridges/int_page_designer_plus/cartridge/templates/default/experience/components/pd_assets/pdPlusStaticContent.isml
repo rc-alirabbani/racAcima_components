@@ -4,9 +4,10 @@
 
 </isscript>
 
-<div class="module-feature module-feature__${pdict.customClass}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
-    <div class="module-feature-section ${pdict.bgImageParallax}">
-        <div class="module-wrapper animation-css ${pdict.horizontalAlignment} ${pdict.verticalAlignment}" data-aos="${pdict.animationType}" data-aos-duration="${pdict.animationDuration}">
+<div class="module-feature">
+    <div class="module-feature-section">
+        <iscomment> Module Icon Layout </iscomment>
+        <div class="module-icon-wrapper">
             <isif condition="${pdict.featureIcon}">
                 <a href="${pdict.moduleLink}" <isif condition="${pdict.moduleNewtab === true}">target="_blank"</isif>>
                     <div class="module-icon">
@@ -17,19 +18,28 @@
 
             <div class="module-content">
                 <isif condition="${pdict.featureHeading}">
-                    <h3 class="module-title" style="font-size:${pdict.h1Configurations.fontSize}; letter-spacing:${pdict.h1Configurations.fontSpacing}; line-height:${pdict.h1Configurations.fontHeight}; margin:${pdict.h1Configurations.marginHeading}; padding:${pdict.h1Configurations.paddingHeading}; font-family: ${pdict.h1Configurations.font}; color:${pdict.h1Configurations.fontColor}; font-weight:${pdict.h1Configurations.fontWeight}; text-shadow: ${pdict.h1Configurations.fontShadow};">
+                    <h3 class="module-title">
                         <isprint value="${pdict.featureHeading}" encoding="off" />
                     </h3>
                 </isif>
                 <isif condition="${pdict.featureDesc}">
-                    <div class="module-description" style="font-size:${pdict.para1Configurations.fontSize}; letter-spacing:${pdict.para1Configurations.paraFontSpacing}; line-height:${pdict.para1Configurations.paraFontHeight}; margin:${pdict.para1Configurations.marginHeading}; padding:${pdict.para1Configurations.paddingHeading}; font-family: ${pdict.para1Configurations.font}; color:${pdict.para1Configurations.fontColor}; font-weight:${pdict.para1Configurations.fontWeight}; text-shadow: ${pdict.para1Configurations.para1Shadow};">
+                    <div class="module-description">
                         <isprint value="${pdict.featureDesc}" encoding="off" />
                     </div>
                 </isif>
-            </div>
+            </div>            
+        </div>
+
+        <iscomment> Module Content Layout </iscomment>
+        <div class="module-content-wrapper">
             <isif condition="${pdict.featureImage}">
-                <div class="module-tile ${pdict.AnimationLax}">
-                    <img style="max-width:${pdict.featureImgWidth}" src="${pdict.featureImage}" alt="${pdict.imgAlt}" />
+                <div class="module-image">
+                    <img src="${pdict.featureImage}" alt="${pdict.imgAlt}" />
+                </div>
+            </isif>
+            <isif condition="${pdict.moduleHeading}">
+                <div class="module-title">
+                    <h3 class="text-left">${pdict.moduleHeading}</h3>
                 </div>
             </isif>
             <isif condition="${pdict.featureImgDesc}">
@@ -40,29 +50,29 @@
 
             <isif condition="${pdict.assetCTALabel !== null}">
                 <div class="assetBtn-block">
-                    <a href="${pdict.assetCTAURL}" title="${pdict.assetCTATitle}" class="assetBtn" style="min-width: ${pdict.minWidth}">
-                        <span class="btn-off-hover" style="border-radius: ${pdict.assetCTABorderRadius}; background-color: ${pdict.assetCTABgColor}; color: ${pdict.assetCTATextColor};">${pdict.assetCTALabel}</span>
-                        <span class="btn-on-hover" style="border-radius: ${pdict.assetCTABorderRadius}; background-color: ${pdict.assetCTAHoverBgColor}; color: ${pdict.assetCTAHoverTextColor};">${pdict.assetCTALabel}</span>
+                    <a href="${pdict.assetCTAURL}" title="${pdict.assetCTATitle}" class="assetBtn">
+                        ${pdict.assetCTALabel}
                     </a>
                 </div>
             </isif>
         </div>
 
+        <iscomment> Module Banner Layout </iscomment>
         <div class="module-banner-wrapper">
             <isif condition="${pdict.moduleBannerImage}">
                 <div class="module-figure">
-                    <img style="max-width:${pdict.moduleBannerWidth}" src="${pdict.moduleBannerImage}" alt="${pdict.moduleImgAlt}" />
+                    <img class="img-fluid" src="${pdict.moduleBannerImage}" alt="${pdict.moduleImgAlt}" />
                 </div>
             </isif>
             <div class="module-banner-caption">
-                <div class="inner align-items-${pdict.captionXalignment} justify-content-${pdict.captionYalignment}">
+                <div class="inner">
                     <isif condition="${pdict.moduleTitle}">
-                        <h3 class="module-banner-heading" style="font-size:${pdict.hConfigBanner.fontSize1}; letter-spacing:${pdict.hConfigBanner.fontSpacing1}; line-height:${pdict.hConfigBanner.fontHeight1}; margin:${pdict.hConfigBanner.marginHeading1}; padding:${pdict.hConfigBanner.paddingHeading1}; font-family: ${pdict.hConfigBanner.font1}; color:${pdict.hConfigBanner.fontColor1}; font-weight:${pdict.hConfigBanner.fontWeight1}; text-shadow: ${pdict.hConfigBanner.fontShadow1};">
+                        <h3 class="module-banner-heading">
                             <isprint value="${pdict.moduleTitle}" encoding="off" />
                         </h3>
                     </isif>
                     <isif condition="${pdict.moduleDesc}">
-                        <div class="module-banner-description" style="font-size:${pdict.paraConfigBanner.fontSize2}; letter-spacing:${pdict.paraConfigBanner.paraFontSpacing2}; line-height:${pdict.paraConfigBanner.paraFontHeigh1}; margin:${pdict.paraConfigBanner.marginHeading2}; padding:${pdict.paraConfigBanner.paddingHeading2}; font-family: ${pdict.paraConfigBanner.font2}; color:${pdict.paraConfigBanner.fontColor2}; font-weight:${pdict.paraConfigBanner.fontWeight2}; text-shadow: ${pdict.paraConfigBanner.fontShadow2};">
+                        <div class="module-banner-description">
                             <isprint value="${pdict.moduleDesc}" encoding="off" />
                         </div>
                     </isif>
