@@ -1,5 +1,5 @@
 {
-    "name": "PD Plus Tab",
+    "name": "PD Plus Collapsible",
     "group": "pd_layouts",
     "attribute_definition_groups": [
         {
@@ -13,26 +13,14 @@
                     "description": "Set layout fluid or at center",
                     "type": "boolean",
                     "required": false
-                },
-                {
-                    "id": "layoutTabs",
-                    "name": "Please select the tab layout e.g (horizontal/Vertical)",
-                    "description": "Tab Defualt Layout is horizontal",
-                    "type": "enum",
-                    "values": [
-                        "horizontal",
-                        "vertical"
-                    ],
-                    "required": false
                 }
             ]
         }
     ],
-
     "region_definitions": [
         {
-            "id": "pdPlusTabsLayout",
-            "name": "PD Plus Tab Component",
+            "id": "accordionlayout",
+            "name": "PD Plus Collapsible Component",
             "component_type_exclusions": []
         }
     ]

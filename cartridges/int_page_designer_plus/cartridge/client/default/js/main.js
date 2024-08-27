@@ -15,6 +15,9 @@ $(document).ready(function () {
     processInclude(require('./components/clientSideValidation'));
     processInclude(require('./components/countrySelector'));
     processInclude(require('./components/toolTip'));
+
+    processInclude(require('./experience/tabsComponent'));
+    processInclude(require('./experience/pdPlusAccordion'));
 });
 
 require('./thirdParty/bootstrap');

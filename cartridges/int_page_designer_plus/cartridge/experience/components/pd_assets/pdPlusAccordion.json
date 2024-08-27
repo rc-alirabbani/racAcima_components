@@ -1,0 +1,46 @@
+{
+    "name": "PD Plus Collapsible",
+    "description": "Display Content Collapsible",
+    "group": "pd_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "h1Configurations",
+            "name": "Collapsible Heading Configurations",
+            "attribute_definitions": [
+                {
+                    "id": "accodionItem",
+                    "name": "Collapsible Heading Text",
+                    "description": "Add collapsible heading text",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "para1Configurations",
+            "name": "Colapsible Description Configurations",
+            "attribute_definitions": [
+                {
+                    "id": "accordionDetail",
+                    "name": "Collapsible Description Text",
+                    "type": "markup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "accordionComponent",
+            "name": "Collapsible Configurations",
+            "description": "This component will display Collapsible.",
+            "attribute_definitions": [
+                {
+                    "id": "collapsibleActive",
+                    "name": "Collapsible Open By Defualt",
+                    "type": "boolean",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

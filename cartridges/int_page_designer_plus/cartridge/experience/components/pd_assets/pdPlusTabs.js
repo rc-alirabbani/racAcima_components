@@ -21,23 +21,6 @@ module.exports.render = function (context) {
 
     model.tabTitle = content.tabTitle;
     model.tabDescription = content.tabDescription;
-
-    model.bgComponentColor = 'style="';
-    if (content.backgroundColor) {
-        model.bgComponentColor += 'background-color: ' + content.backgroundColor.value + '; ';
-    }
-    if (content.backgroundColorAlpha) {
-        model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%;';
-    }
-    if (content.tabTextColor) {
-        model.bgComponentColor += 'color: ' + content.tabTextColor.value + '; ';
-    }
-    if (content.tabBorderColor) {
-        model.bgComponentColor += 'border-bottom-color: ' + content.tabBorderColor.value + '; ';
-    }
-
-    model.bgComponentColor += '"';
-
     
     return new Template('experience/components/pd_assets/pdPlusTabs').render(model).text;
 };

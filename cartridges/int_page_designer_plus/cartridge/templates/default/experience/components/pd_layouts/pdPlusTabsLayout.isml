@@ -4,8 +4,8 @@
     assets.addJs('/js/tabComponent.js');
 </isscript>
 
-<div class="pdplus-component" <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>>
-    <div class="tab-inner" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+<div class="pdplus-component">
+    <div class="tab-inner">
         <iscomment> If checkbox is clicked className Container will be added here else container-fluid className will be added </iscomment>
         <div class="${pdict.isContainer}">
             <div class="tabs-wrapper ${pdict.layoutTabs}">
