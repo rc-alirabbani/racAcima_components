@@ -84,7 +84,7 @@
                     "required": false
                 },
                 {
-                    "id": "featureImgDesc",
+                    "id": "featureContentDesc",
                     "name": "Asset Description Text",
                     "type": "markup",
                     "required": false

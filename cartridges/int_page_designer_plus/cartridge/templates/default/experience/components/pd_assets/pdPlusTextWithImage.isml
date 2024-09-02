@@ -4,33 +4,11 @@
     assets.addCss('/css/experience/components/pd_assets/pdplusThemeTypo.css');
 </isscript>
 
-<div class="text-image-container ${pdict.textXaxisAlignment}">
-    <div class="inner-content d-flex align-items-${pdict.textAlignmentVertical}">
-        <div class="text-column">
-            <div class="text-container" style="max-width: ${pdict.maxWidthText};">
-                <div class="text-editor ${pdict.textShadow}" <isprint value="${pdict.boxContentTxtColor}" encoding="off" />>
-                    <h1 <isprint value="${pdict.boxContentTxtColor}" encoding="off" /> <isprint value="${pdict.customShadowHeading}" encoding="off" />><isprint value="${pdict.headingText}" encoding="off"/></h1>
-                    <div class="animation-css"  data-aos="${pdict.animationType}" data-aos-duration="${pdict.animationDuration}">
-                        <div class="custom-shadow" <isprint value="${pdict.customShadowParagraph}" encoding="off" />>
-                            <isprint value="${pdict.richText}" encoding="off"/>
-                        </div>
-                    </div>
-                </div>
-                <isif condition="${pdict.buttonText !== null}">
-                    <div class="btn-wrapper">
-                        <div class="btn" <isif condition="${pdict.btnBgComponentColor}"><isprint value="${pdict.btnBgComponentColor}" encoding="off" /></isif>>
-                            <a class="tile-link" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>>${pdict.buttonText}</a>
-                        </div>
-                    </div>
-                </isif>
-            </div>
-        </div>
-
-        <div class="photo-column" style="max-width: ${pdict.maxWidthImage};">
-            <div class="photo-tile-container ${pdict.AnimationLax}">
-                <figure class="bnr mb-0 photo-tile-figure <isif condition=" ${pdict.imgFile == null}">nulled-image-container</isif>
-                    <isif condition="${pdict.imgScaleHover === true}">image-hover-scale</isif> ${pdict.imageYPos} ${pdict.imageXPos}">
-
+<div class="text-image-container">
+    <div class="inner-content d-flex align-items-center">
+        <div class="photo-column">
+            <div class="photo-tile-container">
+                <figure class="bnr mb-0 photo-tile-figure">
                     <isif condition="${pdict.imgFile == null}">
                         <iscomment> If image not selected from BM then default image will be shown. </iscomment>
                         <picture class="bnr-img image-container">
@@ -46,6 +24,21 @@
                         </picture>
                     </isif>
                 </figure>
+            </div>
+        </div>
+        <div class="text-column">
+            <div class="text-container">
+                <div class="text-editor">
+                    <h1><isprint value="${pdict.headingText}" encoding="off"/></h1>
+                    <div class="text-content"><isprint value="${pdict.richText}" encoding="off"/></div>
+                </div>
+                <isif condition="${pdict.buttonText !== null}">
+                    <div class="btn-wrapper">
+                        <div class="btn">
+                            <a class="tile-link" href="${pdict.tileLink}">${pdict.buttonText}</a>
+                        </div>
+                    </div>
+                </isif>
             </div>
         </div>
     </div>

@@ -30,16 +30,8 @@ module.exports.render = function (context, modelIn) {
         };
     }
 
-    /* Image Scale on Hover Checkbox */
-    model.imgScaleHover = content.imgScaleHover;
     model.headingText = content.headingText ? content.headingText : '';
-    model.contentBlockTxtColor = content.contentBlockTxtColor ? content.contentBlockTxtColor : '';
     model.richText = content.richText ? content.richText : '';
-    model.maxWidthText = content.maxWidthText ? content.maxWidthText : '';
-    model.maxWidthImage = content.maxWidthImage ? content.maxWidthImage : '';
-    model.animationType = content.animationType ? content.animationType : '';
-    model.animationDuration = content.animationDuration ? content.animationDuration : '';
-    
     
     if (content.tileLink) {
         model.tileLink = content.tileLink;
@@ -47,85 +39,8 @@ module.exports.render = function (context, modelIn) {
         model.tileLink = 'javascript:void(0)';
     }
 
-    model.tileNewtab = content.tileNewtab;
-
     if(content.buttonText) {
         model.buttonText = content.buttonText;
-    }
-
-    model.headingTextProps = 'style="';
-    if (content.contentBlockTxtColor) {
-        model.headingTextProps += 'color:' + content.contentBlockTxtColor.value + '; ';
-    }
-    model.headingTextProps += '"';
-
-    model.customShadowParagraph = 'style="';
-    if (content.customShadowParagraph) {
-        model.customShadowParagraph += 'text-shadow:' + content.customShadowParagraph + '; ';
-    }
-    model.customShadowParagraph += '"';
-
-    model.customShadowHeading = 'style="';
-    if (content.customShadowHeading) {
-        model.customShadowHeading += 'text-shadow:' + content.customShadowHeading + '; ';
-    }
-    model.customShadowHeading += '"';
-
-    /* Container Area color Scheme styles */
-    model.bgComponentColor = 'style="';
-    if (content.backgroundColor) {
-        model.bgComponentColor += 'background-color: ' + content.backgroundColor.value + '; ';
-    }
-    if (content.backgroundColorAlpha) {
-        model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%;';
-    }
-
-    model.bgComponentColor += '"';
-
-    /* button color styles */
-    model.btnBgComponentColor = 'style="';
-    if (content.buttonBgColor) {
-        model.btnBgComponentColor += 'background-color: ' + content.buttonBgColor.value + '; ';
-    }
-    if (content.buttonTextColor) {
-        model.btnBgComponentColor += 'color: ' + content.buttonTextColor.value + '; ';
-    }
-    if (content.buttonBorderColor) {
-        model.btnBgComponentColor += 'border-color: ' + content.buttonBorderColor.value + '; ';
-    }
-    model.btnBgComponentColor += '"';
-
-    /* text with Image layout if found then concatenate its class name */
-    if (content.textXaxisAlignment === 'text on left') {
-        model.textXaxisAlignment = 'order-text-left';
-    } else if (content.textXaxisAlignment === 'text on right') {
-        model.textXaxisAlignment = 'order-text-right';
-    }
-
-    if (content.textShadow === 'Text White Shadow') {
-        model.textShadow = 'txt-white-shadow';
-    } else if (content.textShadow === 'Text Black Shadow') {
-        model.textShadow = 'txt-black-shadow';
-    } else {
-        model.textShadow = '';
-    }
-
-    /* Horizontal Position of text Container if found then concatenate its Class Name */
-    if (content.textAlignmentVertical === 'top') {
-        model.textAlignmentVertical = 'start';
-    } else if (content.textAlignmentVertical === 'center') {
-        model.textAlignmentVertical = 'center';
-    } else if (content.textAlignmentVertical === 'bottom') {
-        model.textAlignmentVertical = 'end';
-    }
-
-    /*Add Laxes Animation and its Class Name */
-    if (content.AnimationLax === 'Animate Image') {
-        model.AnimationLax = 'animate-img';
-    } else if (content.AnimationLax === 'Column Animate Up') {
-        model.AnimationLax = 'col-animate-up';
-    } else if (content.AnimationLax === 'Column Animate Down') {
-        model.AnimationLax = 'col-animate-down';
     }
 
     return new Template('experience/components/pd_assets/pdPlusTextWithImage').render(model).text;

@@ -1,5 +1,5 @@
 {
-  "name": "PD Plus Text With Image",
+  "name": "Text With Image Item",
   "description": "Select a photo that you want to insert into your layout component",
   "group": "pd_assets",
   "attribute_definition_groups": [
@@ -9,32 +9,6 @@
           "description": "This component will display image with subtitle positions.",
           "attribute_definitions": [
                 {
-                    "id": "AnimationLax",
-                    "name": "Select Class for animation on scroll",
-                    "description": "Please select a class for animation on scroll",
-                    "type": "enum",
-                    "values": [
-                        "Animate Image",
-                        "Column Animate Up",
-                        "Column Animate Down"
-                    ],
-                    "required": false
-                },
-                {
-                    "id": "animationType",
-                    "name": "Animation Type e.g (fade-in, fade-up, fade-down)",
-                    "description": "Please select type of animation",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "animationDuration",
-                    "name": "Animation Duration e.g (1000 is equal 1s)",
-                    "description": "Please select duration of animation",
-                    "type": "string",
-                    "required": false
-                },
-                {
                     "id": "imgFile",
                     "name": "Tile Image",
                     "description": "Select a photo to be displayed",
@@ -42,55 +16,9 @@
                     "required": false
                 },
                 {
-                    "id": "imgScaleHover",
-                    "name": "Scale Image on Hover",
-                    "description": "Scale the image on hover",
-                    "type": "boolean",
-                    "required": false
-                },
-                {
                     "id": "imgAlt",
                     "name": "Alternate Text of Image",
                     "description": "The image alt text shown by the component.",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "maxWidthImage",
-                    "name": "Max Width of Image Section in (px)",
-                    "description": "Please add max width of image section",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "textXaxisAlignment",
-                    "name": "Position of text along x-axis w.r.t Image",
-                    "description": "Position of text container with respect to Image",
-                    "type": "enum",
-                    "values": [
-                        "text on left",
-                        "text on right"
-                    ],
-                    "default_value": "text on left",
-                    "required": true
-                },
-                {
-                    "id": "textAlignmentVertical",
-                    "name": "Position of text container along y-axis",
-                    "description": "Position of text container along vertical direction",
-                    "type": "enum",
-                    "values": [
-                        "top",
-                        "center",
-                        "bottom"
-                    ],
-                    "default_value": "center",
-                    "required": false
-                },
-                {
-                    "id": "maxWidthText",
-                    "name": "Max Width of Content Section in (px)",
-                    "description": "Please add max width of content section",
                     "type": "string",
                     "required": false
                 },
@@ -102,45 +30,10 @@
                     "required": false
                 },
                 {
-                    "id": "contentBlockTxtColor",
-                    "name": "Specify content block text color",
-                    "description": "Set content text color",
-                    "required": false,
-                    "type": "custom",
-                    "editor_definition": {
-                        "type": "themer.colorpicker"
-                    }
-                },
-                {
                     "id": "richText",
                     "name": "Rich text content area",
                     "description": "This is the rich text content area",
                     "type": "markup",
-                    "required": false
-                },
-                {
-                    "id": "textShadow",
-                    "name": "Please select the text shadow type",
-                    "description": "Shadow type e.g (Parallax/Fixed)",
-                    "type": "enum",
-                    "values": [
-                        "Text White Shadow",
-                        "Text Black Shadow"
-                    ],
-                    "required": false
-                },
-                {
-                    "id": "customShadowHeading",
-                    "name": "Custom shadow for heading (2px 2px 2px #ColorName)",
-                    "description": "Custom shadow w.r.t content text block",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "customShadowParagraph",
-                    "name": "Custom shadow for paragraph (2px 2px 2px #ColorName)",
-                    "description": "Custom shadow w.r.t content text block",
-                    "type": "string",
                     "required": false
                 },
                 {
@@ -156,43 +49,6 @@
                     "description": "Provide the Link URL of Anchor Button.",
                     "type": "url",
                     "required": false
-                },
-                {
-                    "id": "tileNewtab",
-                    "name": "New Tab",
-                    "description": "Open Link in New Tab",
-                    "type": "boolean",
-                    "required": false
-                },
-                {
-                    "id": "buttonBgColor",
-                    "name": "Specify button background color",
-                    "description": "Set button background color",
-                    "required": false,
-                    "type": "custom",
-                    "editor_definition": {
-                        "type": "themer.colorpicker"
-                    }
-                },
-                {
-                    "id": "buttonTextColor",
-                    "name": "Specify button text color",
-                    "description": "Set button text color",
-                    "required": false,
-                    "type": "custom",
-                    "editor_definition": {
-                        "type": "themer.colorpicker"
-                    }
-                },
-                {
-                    "id": "buttonBorderColor",
-                    "name": "Specify button border color",
-                    "description": "Set button border color",
-                    "required": false,
-                    "type": "custom",
-                    "editor_definition": {
-                        "type": "themer.colorpicker"
-                    }
                 }
             ]
         }

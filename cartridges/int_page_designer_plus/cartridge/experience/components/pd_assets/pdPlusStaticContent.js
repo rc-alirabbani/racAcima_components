@@ -27,7 +27,7 @@ module.exports.render = function (context) {
     model.featureImage = content.featureImage ? content.featureImage.file.url : null;
     model.imgAlt = content.imgAlt ? content.imgAlt: 'image alt';
     model.moduleHeading = content.moduleHeading ? content.moduleHeading : null;
-    model.featureImgDesc = content.featureImgDesc ? content.featureImgDesc : null;
+    model.featureContentDesc = content.featureContentDesc ? content.featureContentDesc : null;
     /*Button Style */
     model.assetCTALabel = content.assetCTALabel ? content.assetCTALabel : null;
     model.assetCTATitle = content.assetCTATitle ? content.assetCTATitle : null;
