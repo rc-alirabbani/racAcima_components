@@ -37,4 +37,23 @@
 div.sf-interactions-proxyHoverContainer a {
     overflow: visible;
 }
+
+@media (min-width: 992px) {
+    .col-md-5-column {
+        width: 20% !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .col-md-5-column {
+        width: 33.33% !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .col-md-5-column {
+        width: 50% !important;
+    }
+}
+
 /* stylelint-enable selector-class-pattern */
